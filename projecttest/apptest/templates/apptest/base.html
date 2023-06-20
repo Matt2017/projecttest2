@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <h1>Welcome to finsee!</h1>
+    <div class="navbar">
+        <a href="{% url 'simplecalc' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">Calculators
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="{% url 'simplecalc' %}">Simple Calc</a>
+            <a href="{% url 'marketchart' %}">Market Chart</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+{% block content %}
+{% endblock %}
+</body>

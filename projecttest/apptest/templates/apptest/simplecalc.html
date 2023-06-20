@@ -1,0 +1,15 @@
+{% extends "apptest/base.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'apptest/style.css' %}">
+{% endblock %}
+
+<body> 
+    {% block content%}
+    <h1>oitr</h1>
+    <a href="{% url 'simplecalc' %}">Sample link</a>
+    <h1>test</h1>
+    
+    {% endblock %}
+ </body>
+
